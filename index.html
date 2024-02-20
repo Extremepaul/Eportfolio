@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  </head>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js" defer></script>
+</head>
+<body>
+  
+    
+    <div class="container-fluid">
+        <div class="row min-vh-100 flex-column flex-md-row">
+          <aside class="col-12 col-md-3 col-xl-2 p-0 bg-dark ">
+            <nav class="navbar navbar-expand-md navbar-dark bd-dark flex-md-column flex-row align-items-center py-2 text-center sticky-top " id="sidebar">
+              <div class="text-center p-3">
+                <img src="images/profile.png" alt="profile picture" class="img-fluid rounded-circle my-4 p-1 d-none d-md-block shadow"/>
+               <a href="#" class="navbar-brand mx-0 font-weight-bold  text-nowrap" >Jean Paul Petit</a>
+              </div>
+                  <button type="button" class="navbar-toggler border-0 order-1" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse order-last" id="nav">
+                <ul class="navbar-nav flex-column w-100 justify-content-center">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link active"> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="projects.html" class="nav-link"> Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a href="resume.html" class="nav-link"> See My Resume </a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link"> Contact Me </a>
+                </li>
+              </ul>
+              </div>      
+            </nav>   
+          </aside>
+          <main class="col px-0 flex-grow-1">
+            <div class="container py3">
+                <article><p class="texto" id="portfolio"><strong>E-Portfolio</strong></p></p></article>
+                <article class="texto2">ABOUT ME
+                    <p>
+
+                      <div id="example-2">
+                        <button @click="show = !show" class="btn btn-secondary">Strengths</button>
+                        <transition name="bounce">
+                          <p v-if="show"><ul>
+                            <li>Leadership skills</li>
+                            <li>Problem-solving oriented</li>
+                            <li>Experience in coordinating work teams</li>
+                            <li>Solid knowledge of electronics</li>
+                            <li>Experience dealing with clients</li>
+                        </ul></p>
+                        </transition>
+                      </div>
+
+                    </p>
+                    <p>My professional performance has always been oriented to client service and attention, through on-site technical support in automatic doors, IP CCTV Systems with analytics, Access Control by biometrics.
+                        My unique combination of education, skills and work experience has allowed me to develop my strengths in project management and process improvement. Due to my varied background, I am a resourceful and creative problem solver. I can always find multiple solutions to even the most complex problems.</p>
+                        <div id="skills">
+                          <button @click="show = !show" class="btn btn-secondary">
+                            Skills
+                          </button>
+                          <transition
+                            v-on:before-enter="beforeEnter"
+                            v-on:enter="enter"
+                            v-on:leave="leave"
+                            v-bind:css="false"
+                          >
+                            <p v-if="show">
+                              <ul>
+                                    <li>JavaScript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Bootstrap</li>
+                                    <li>API</li>
+                                    <li>Vue</li>
+                                    <li>Database (sql)</li>
+                                    <li>Visual Studio Code</li>
+                              </ul>
+                            </p>
+                          </transition>
+                        </div>
+                </article>
+                <article id="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/5uhf1N3L8cc?si=CMO7guPJinKvZmQN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </article>
+            </div>
+
+          </main>
+        </div>
+      </div>
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<footer>
+  Tutorial "Responsive Bootstrap 5 Sidebar | Coding League" https://youtu.be/8eYbYnoqqBo?si=9ZfJ8yAzYW_7TJs4
+  Tutorial "https://es.vuejs.org/v2/guide/transitions#Clases-de-Transicion"
+</footer>        
+</body>
+</html>
